@@ -2,18 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const db = require('./db'); // 모듈화된 DB 연결 코드 가져오기
 
-const path = require('path');
-
-
-// Serve static files from the React app's build directory
-app.use(express.static(path.join(__dirname, 'build')));
-
-// Serve the React app for any routes not handled by your API
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-
 const app = express();
 const port = 3000;
 
