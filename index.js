@@ -3,7 +3,7 @@ const cors = require('cors');
 const db = require('./db'); // 모듈화된 DB 연결 코드 가져오기
 
 const app = express();
-const port = 3000;
+const PORT = 3000;
 
 
 // CORS 설정
@@ -39,6 +39,6 @@ app.get('/api/users', (req, res) => {
 });
 
 // 서버 실행
-app.listen(port, '0.0.0.0', () => {
-    console.log(`서버가 http://localhost:${port} 에서 실행 중입니다.`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
 });
